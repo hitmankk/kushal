@@ -12,12 +12,24 @@ body{
   color: #fff ;
 
 }
+#head {
+    /* The image used */
+    
+    background-image: url("images/frontbackground2.png ");
+    /* Set a specific height */
+    min-height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 #head{
     width: 100%;
     height: 100vh;
-    background-image: url("images/frontbackground2.png ");
-    background-size: cover;
-    background-position: center;
+   
+  
 }
 .container{
     padding: 10px 10%;
@@ -191,6 +203,7 @@ nav ul li a:hover::after{
 }
 .work img{
     width: 100%;
+    height: ;
     border-radius: 10px;
     display: block;
     transition: transform 0.5s;
@@ -298,11 +311,16 @@ form input, form textarea{
     border-radius: 6px;
 
 }
-form btn2{
+form .btn2{
     padding: 14px 60px;
     font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
+}
+#msg{
+    color: #61b752;
+    display: block;
+margin-top: -20px; 
 }
 /* --------------------------------css for small screens--------------------------------------- */
 nav .fas{
