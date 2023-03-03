@@ -5,31 +5,47 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-compatible" content="IE=edge">
-  <title>Kushal.</title>
+  <title> ... Kushal kant fb4234 ...</title>
   <link rel="stylesheet" href="stylesheeet.css">
   <script src="https://kit.fontawesome.com/297a71943d.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src='https://code.jquery.com/jquery-2.1.3.min.js'></script>
+  <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 </head>
 
-<body>
+<body onload="myFunction()">
+  <div id ="loading">
+		<div class="loader"><span></span></div>
+		<div class="loader"><span></span></div>
+
+		<div class="loader"><i></i></div>
+		<div class="loader"><i></i></div>
+	</div>
   <div id="head">
     <div class="container">
       <nav>
         <img src="images/navlogo.png" class="logo">
         <ul id="sidemenu">
           <li><a href="#header">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#contact">Contact</a></li>
-          <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
+          <i class="fas fa-solid fa-xmark" style="color: white;"onclick="closemenu()"></i>
         </ul>
-        <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+        <i class="fas fa-solid fa-bars" style="color: white;" onclick="openmenu()"></i>
       </nav>
-      <div class="header-text">
-        <p>UI/UX Designer</p>
-        <h1>Hi,<br> I'm <span>Kushal Kant</span><br> From India </h1>
+      <div class="design">
+        <div class="header-text">
+       
+          <p>UI/UX Designer</p>
+          <h1>Hi, I am Kushal Kant <br>The
+            <span class="txt-type" data-wait="3000" data-words='["Developer", "Designer", "Creator"]'></span>
+          </h1><br> From India </h1>
+        </div>
+        </div>
+      <div class="ball"></div>
       </div>
-    </div>
+     
   </div>
   <!--------------about------------------>
   <div class="about" id="about">
@@ -59,20 +75,18 @@
             </ul>
           </div>
           <div class="tab-contents" id="Experience">
-          <ul>
-              <li><span>SKCF Intern in Web Domain </span><br>Currently working on their website which is on <strong>wordpress</strong> and done <strong>SEO</strong> for their website<br> which make their website 35% more efficient</li>
+            <ul>
               <li><span>Coursera Certification Course for HTML,CSS & JS</span><br>An online course authorized by Duke
-              University<br> and Offered through Coursera and completed on 16 March 2022<br><a href="/Coursera_webdev.pdf">certificate<i class="fa-solid fa-up-right-from-square"></i></a></li>
-              <li><span>Coursera Certification Course building web application using <strong>PHP</strong></span><br>
-                University<br> and Offered through Coursera and completed on 1 january 2023<br><a href="/Kushal Coursera.pdf">certificate<i class="fa-solid fa-up-right-from-square"></i></a></li>
+                University<br> and Offered through Coursera and completed on 16 March 2022</li>
               <li><span>Udemy Web Development Bootcamp</span><br>An online course authorized by udemy
-                <br> and completed on 30 March 2022<br><a href="/UC web development course.pdf">certificate<i class="fa-solid fa-up-right-from-square"></i></a></li>
+                <br> and completed on 30 March 2022<br><a href="/Ucwebdev.pdf">certificate<i class="fa-solid fa-up-right-from-square"></i></a></li>
               <li><span>NPTEL Qualified</span><br>NPTEL-Cloud Computing course completed on <br> 8 August 2021 and
                 received an Elite score of 63%<br><a href="/NPTEL_cloudcomputng.jpeg">certificate<i class="fa-solid fa-up-right-from-square"></i></a> </li>
               <li><span>Serving as TECH-Head</span><br>Serving as Tech Head in IPR cell (Intellectual Property Rights
                 Cell) </li>
               <li><span>Coursera certification for UI/UX Design</span><br>An Online course authorised by Georgia
                 Institute of Technology <br>and offered through Coursera and completed on 29 December 2021<br><a href="/Coursera user design.pdf">certificate<i class="fa-solid fa-up-right-from-square"></i></a></li>
+              <li><span>SKCF Intern in Web Domain </span><br>Currently working on their website which is on <strong>wordpress</strong> and done <strong>SEO</strong> for their website<br> which make their website 35% more efficient</li>
             </ul>
           </div>
           <div class="tab-contents" id="Education">
@@ -111,9 +125,10 @@
         </div>
         <div>
           <i class="fa-solid fa-database"></i>
-          <h2>Firebase</h2>
-          <p>Have learned all about firebase and fully capable to use 
-            all the possible tools in firebase and apply it to your website.
+          <h2>Database Optimisation</h2>
+          <p>Have learned MySQL and fully capable to optimise
+            the database i.e. Normalize the database and fetch
+            all the data when required.
           </p>
           <a href="#">Learn More</a>
         </div>
@@ -122,9 +137,18 @@
     </div>
 
   </div>
-  <!-- -------portfolio----------- -->
-  <div class="portfolio" id="portfolio">
+  <!-- -------------------skills----------------- -->
+  <div id="services">
     <div class="container">
+      <h1 class="sub-title">Skills</h1>
+      <span class="content"></span>
+
+<script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"> </script>
+      </div>
+      </div>
+  <!-- -------portfolio----------- -->
+  <div class="portfolio" id="portfolio" style="z-index:9;">
+    <div class="container" style="z-index: 9;">
       <h1 class="sub-title">My Work</h1>
       <div class="work-list">
         <div class="work">
@@ -139,10 +163,10 @@
         <div class="work">
           <img src="images/work-2.png" alt="">
           <div class="layer">
-            <h3>tic-tac-toe game</h3>
+            <h3>platform bouncing ball game</h3>
             <p>This is a python based game with gui using tkinter
             </p>
-            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            <a href="https://frabjous-banoffee-a58f8f.netlify.app/"><i class="fa-solid fa-up-right-from-square"></i></a>
           </div>
         </div>
         <div class="work">
@@ -155,7 +179,7 @@
           </div>
         </div>
       </div>
-      <a href="#" class="btn">See More</a>
+      <a href="#" class="btn" >See More</a>
     </div>
   </div>
   <!-- -------------------------contact----------------------------- -->
@@ -166,7 +190,7 @@
           <h1 class="sub-title">Contact Me</h1>
           <p><i class="fa-sharp fa-solid fa-paper-plane"></i> kushal.kant007@gmail.com</p>
           <p><i class="fa-sharp fa-solid fa-phone"></i> 8294695325</p>
-          <div class="social-icons">
+          <div class="social-icons" style="z-index: 9;">
             <a href="https://www.facebook.com/kushal.kant.94"><i class="fa-brands fa-facebook"></i></a>
             <a href="https://www.instagram.com/kushal_kant24/"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://www.linkedin.com/in/kushal-kant-865394200/"><i class="fa-brands fa-linkedin"></i></a>
@@ -187,7 +211,90 @@
       </div>
     </div>
   </div>
+  <!-- <footer>
+    <div id='snake'>
+     
+    </div>
+    
+    <div id='tutorial'> Click / Touch to interact</div>
+
+  </footer> -->
   <script>
+    var preloader = document.getElementById('loading');
+    function myFunction(){
+      preloader.style.display = 'none';
+    }
+  </script>
+  <script>
+    class TypeWriter {
+  constructor(txtElement, words, wait = 3000) {
+    this.txtElement = txtElement;
+    this.words = words;
+    this.txt = "";
+    this.wordIndex = 0;
+    this.wait = parseInt(wait, 10);
+    this.type();
+    this.isDeleting = false;
+  }
+
+  type() {
+    // Current index of word
+    const current = this.wordIndex % this.words.length;
+    // Get full text of current word
+    const fullTxt = this.words[current];
+
+    // Check if deleting
+    if (this.isDeleting) {
+      // Remove char
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+      // Add char
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    // Insert txt into element
+    this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+
+    // Initial Type Speed
+    let typeSpeed = 300;
+
+    if (this.isDeleting) {
+      typeSpeed /= 2;
+    }
+
+    // If word is complete
+    if (!this.isDeleting && this.txt === fullTxt) {
+      // Make pause at end
+      typeSpeed = this.wait;
+      // Set delete to true
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === "") {
+      this.isDeleting = false;
+      // Move to next word
+      this.wordIndex++;
+      // Pause before start typing
+      typeSpeed = 500;
+    }
+
+    setTimeout(() => this.type(), typeSpeed);
+  }
+}
+
+// Init On DOM Load
+document.addEventListener("DOMContentLoaded", init);
+
+// Init App
+function init() {
+  const txtElement = document.querySelector(".txt-type");
+  const words = JSON.parse(txtElement.getAttribute("data-words"));
+  const wait = txtElement.getAttribute("data-wait");
+  // Init TypeWriter
+  new TypeWriter(txtElement, words, wait);
+}
+
+  </script>
+  <script>
+
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
     function opentab(tabname) {
@@ -215,7 +322,40 @@
 
     }
   </script>
+<script src="index.js"></script>
+<script src="skills.js"></script>
+<script>const ball = document.querySelector('.ball');
 
+  let mouseX = 0;
+  let mouseY = 0;
+  
+  let ballX = 0;
+  let ballY = 0;
+  
+  let speed = 0.1;
+  
+  // Update ball position
+  function animate() {
+    //Determine distance between ball and mouse
+    let distX = mouseX - ballX;
+    let distY = mouseY - ballY;
+    
+    // Find position of ball and some distance * speed
+    ballX = ballX + (distX * speed);
+    ballY = ballY + (distY * speed);
+    
+    ball.style.left = ballX + "px";
+    ball.style.top = ballY + "px";
+    
+    requestAnimationFrame(animate);
+  }
+  animate();
+  
+  // Move ball with cursor
+  document.addEventListener("mousemove", function(event) {
+    mouseX = event.pageX;
+    mouseY = event.pageY;
+  });</script>
   
 </body>
 
