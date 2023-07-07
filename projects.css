@@ -1,0 +1,99 @@
+/* SIMPLE RESET CSS */
+*,
+::before,
+::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #242537;
+
+  /* JUST FOR CENTER CONTENT */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  position: relative;
+
+  margin-bottom: 15px;
+  letter-spacing: 8px;
+  font-size: 30px;
+  font-weight: 900;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  text-transform: uppercase;
+  width: max-content;
+
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+  -webkit-text-fill-color: transparent;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+/* BAR */
+nav li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background-color: var(--color);
+
+  transition: left 0.5s linear;
+}
+nav li:hover::before {
+  left: 100%;
+}
+
+nav li::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+
+  -webkit-text-stroke: 1px var(--color);
+  -webkit-text-fill-color: var(--color);
+  overflow-x: hidden;
+  user-select: none;
+
+  pointer-events: none;
+  transition: width 0.5s linear;
+}
+
+nav li:hover::after {
+  width: calc(100%);
+}
+
+nav li:nth-of-type(1) {
+  --color: lightblue;
+}
+nav li:nth-of-type(2) {
+  --color: darkmagenta;
+}
+nav li:nth-of-type(3) {
+  --color: yellow;
+}
+nav li:nth-of-type(4) {
+  --color: green;
+}
+nav li:nth-of-type(5) {
+  --color: crimson;
+}

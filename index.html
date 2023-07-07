@@ -5,8 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-compatible" content="IE=edge">
-  <title>Kushal-Kant</title>
+  <title>Kushal kant </title>
   <link rel="stylesheet" href="stylesheeet.css">
+  <link rel="stylesheet" href="portfolio.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <script src="https://kit.fontawesome.com/297a71943d.js" crossorigin="anonymous"></script>
   <script type="text/javascript" src='https://code.jquery.com/jquery-2.1.3.min.js'></script>
   <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
@@ -20,7 +22,7 @@
 		<div class="loader"><i></i></div>
 		<div class="loader"><i></i></div>
 	</div>
-  <div id="head">
+  <div id="header">
     <div class="container">
       <nav>
         <img src="images/navlogo.png" class="logo">
@@ -43,7 +45,7 @@
           </h1><br> From India </h1>
         </div>
         </div>
-      <div class="ball"></div>
+      <div class="ball" style="z-index: -1;"></div>
       </div>
      
   </div>
@@ -138,21 +140,23 @@
 
   </div>
   <!-- -------------------skills----------------- -->
-  <div id="services">
-    <div class="container">
+  <div id="services"  >
+    <div class="container" style="width: 65%; " >
       <h1 class="sub-title">Skills</h1>
-      <span class="content"></span>
+      <span class="content" style="display: flex; justify-content: center; margin-left: 80%;"></span>
 
 <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"> </script>
       </div>
       </div>
   <!-- -------portfolio----------- -->
+  
   <div class="portfolio" id="portfolio" style="z-index:9;">
+    
     <div class="container" style="z-index: 9;">
       <h1 class="sub-title">My Work</h1>
       <div class="work-list">
         <div class="work">
-          <img src="images/work-1.png" alt="">
+          <img src="images/featured-2.jpg" alt="">
           <div class="layer">
             <h3>Tech Blogging Website</h3>
             <p>This website contain
@@ -161,7 +165,7 @@
           </div>
         </div>
         <div class="work">
-          <img src="images/work-2.png" alt="">
+          <img src="images/featured-3.jpg" alt="">
           <div class="layer">
             <h3>platform bouncing ball game</h3>
             <p>This is a python based game with gui using tkinter
@@ -170,7 +174,7 @@
           </div>
         </div>
         <div class="work">
-          <img src="images/work-3.png" alt="">
+          <img src="images/featured-4.jpg" alt="">
           <div class="layer">
             <h3>Blood-Line</h3>
             <p>it's an webapp which revolutionarize the blood donation sector in India </p>
@@ -178,9 +182,19 @@
           </div>
         </div>
       </div>
-      <a href="#" class="btn" >See More</a>
+      <a href="projects.html" class="btn" >See More</a>
     </div>
   </div>
+
+
+
+
+<!-- new card layout -->
+
+  
+
+
+
   <!-- -------------------------contact----------------------------- -->
   <div id="contact">
     <div class="container">
@@ -218,6 +232,11 @@
     <div id='tutorial'> Click / Touch to interact</div>
 
   </footer> -->
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/skills.js"></script>
+
+
   <script>
     var preloader = document.getElementById('loading');
     function myFunction(){
